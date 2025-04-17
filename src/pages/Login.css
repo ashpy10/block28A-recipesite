@@ -112,3 +112,23 @@
     animation: flicker 2s infinite;
   }
   
+  .auth-switch {
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
+    color: #ccc;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .neon-link {
+    color: #ff7ca3;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 0 0 5px #ff7ca3, 0 0 10px #7f4bd6;
+    transition: color 0.2s ease;
+  }
+  
+  .neon-link:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff7ca3;
+  }
+  

@@ -12,19 +12,13 @@ const NavBar = () => {
         <nav className="navbar">
             <div className="nav-container">
                 <div className="nav-logo">
-                    <img src="" />
                     <h1>Recipe Rewind</h1>
                 </div>
                 <ul className="nav-links">
                     <li>
                         <Link to="/">Home</Link>
                     </li>
-                    {!user && (
-                        <li>
-                        <Link to="/login">Login</Link>
-                        </li>
-                    )}
-                    {user && (
+                    {user ? (
                         <>
                         <li>
                             <Link to="/favorites">My Favorites</Link>
@@ -35,6 +29,8 @@ const NavBar = () => {
                             </button>
                         </li>
                         </>
+                    ) : (
+                        <Link to="/login">Log In</Link>
                     )}
                 </ul>
                 </div>
