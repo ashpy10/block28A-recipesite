@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Baloo+2&display=swap');
+
+:root {
+  --tv-peach: #ffb385;
+  --bubblegum: #ff7ca3;
+  --vhs-purple: #7f4bd6;
+  --aqua: #71e1d1;
+  --static-white: #f5f5f5;
+  --screen-bg: #2b2b2b;
+}
+
+body {
+    background: radial-gradient(#ddd, #bbb);
+    background-image: repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.02),
+      rgba(255,255,255,0.02) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+  }
+
+.recipe-detail-container {
+  font-family: 'Baloo 2', cursive;
+  background: var(--static-white) url('https://www.transparenttextures.com/patterns/pw-maze-white.png');
+  border: 6px solid var(--vhs-purple);
+  border-radius: 20px;
+  margin: 3rem auto;
+  padding: 2rem;
+  max-width: 900px;
+  box-shadow: 0 0 20px #0005;
+  position: relative;
+  overflow: hidden;
+}
+
+.recipe-detail-container::before {
+  content: "📼 RECIPE REWIND PRESENTS";
+  position: absolute;
+  top: -1.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--vhs-purple);
+  color: #ff7ca3;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.6rem;
+  padding: 0.3rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px #0003;
+  z-index: 2;
+}
+
+.recipe-img {
+  width: 100%;
+  border: 6px solid var(--aqua);
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-family: 'Press Start 2P', monospace;
+  color: var(--vhs-purple);
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.tags {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--bubblegum);
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: var(--vhs-purple);
+  margin-top: 2rem;
+  text-transform: uppercase;
+}
+
+ul {
+  padding-left: 1.2rem;
+  line-height: 1.7;
+  color: #ff7ca3;
+  list-style-type: none;
+}
+
+p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+a {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: var(--aqua);
+  text-decoration: none;
+  border-bottom: 2px dashed var(--aqua);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--bubblegum);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.favorite-button {
+  font-family: 'Press Start 2P', monospace;
+  background: linear-gradient(135deg, #ffb385, #ff7ca3);
+  border: 2px solid #fff;
+  color: #2b2b2b;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  margin-top: 1.5rem auto 0 auto;
+  box-shadow:
+    0 0 5px #ff7ca366,
+    0 0 10px #ffb38566,
+    inset 0 0 6px #fff5;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.favorite-button::after {
+  content: "✨";
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  font-size: 1rem;
+  animation: sparkle 2s infinite linear;
+}
+
+.favorite-button:hover {
+  transform: scale(1.03) rotate(-1deg);
+  box-shadow:
+    0 0 8px #ff7ca3cc,
+    0 0 20px #ffb385aa;
+  background: linear-gradient(135deg, #ff7ca3, #ffb385);
+}
+
+@keyframes sparkle {
+  0% { transform: rotate(0deg) scale(1); opacity: 1; }
+  50% { transform: rotate(180deg) scale(1.2); opacity: 0.8; }
+  100% { transform: rotate(360deg) scale(1); opacity: 1; }
+}

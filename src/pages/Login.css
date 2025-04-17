@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Press+Start+2P&display=swap');
+
+.auth-container {
+    background: linear-gradient(145deg, #1a1a2e, #251c39);
+    border: 4px double #ff7ca3;
+    padding: 3rem 2rem;
+    margin: 5rem auto;
+    width: 360px;
+    border-radius: 18px;
+    box-shadow: 0 0 25px #7f4bd6, 0 0 40px #ff7ca3;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;;
+  }
+  
+  
+  .auth-container h2 {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    color: #ffb6c1;
+    font-family: 'Press Start 2P', monospace;
+    text-shadow: 
+      0 0 4px #ff7ca3,
+      0 0 10px #7f4bd6,
+      0 0 20px #ff7ca3;
+    letter-spacing: 1px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  
+  input {
+    padding: 0.9rem;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background: #2d2d44;
+    color: #ffdde0;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+    box-shadow: inset 0 0 8px #000;
+    border: 2px solid #ff7ca3;
+    transition: border-color 0.2s ease;
+  }
+  
+  input:focus {
+    border-color: #ffb6c1;
+    box-shadow: 0 0 8px #ff7ca3cc;
+  }
+  
+  
+  .auth-button {
+    padding: 0.85rem 1.2rem;
+    background: linear-gradient(45deg, #ff7ca3, #ffb6c1);
+    border: 2px solid #fff;
+    border-radius: 12px;
+    color: #1a1a2e;
+    font-weight: bold;
+    font-size: 0.95rem;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    box-shadow: 
+      0 0 10px #ff7ca3cc,
+      inset 0 0 6px #fff;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.06);
+    box-shadow: 
+      0 0 20px #ffb6c1,
+      0 0 30px #7f4bd6;
+  }
+  
+  
+  .exit-button {
+    background: transparent;
+    border: 2px solid #ff4f5e;
+    padding: 0.5rem 1rem;
+    color: #ff4f5e;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.75rem;
+    cursor: pointer;
+    border-radius: 8px;
+    text-shadow:
+      0 0 5px #ff4f5e,
+      0 0 10px #ff4f5e,
+      0 0 15px #ff4f5e;
+    box-shadow:
+      0 0 5px #ff4f5e,
+      0 0 10px #ff4f5e inset;
+    transition: transform 0.2s ease;
+  }
+  
+  .exit-button:hover {
+    transform: scale(1.05) rotate(-1deg);
+    background: #ff4f5e20;
+  }
+  
+  @keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      opacity: 1;
+    }
+    20%, 22%, 24%, 55% {
+      opacity: 0.4;
+    }
+  }
+  
+  .exit-button {
+    animation: flicker 2s infinite;
+  }
+  

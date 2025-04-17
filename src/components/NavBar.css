@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Press+Start+2P&display=swap');
+
+:root {
+  --tv-peach: #ffb385;
+  --bubblegum: #ff7ca3;
+  --vhs-purple: #7f4bd6;
+  --aqua: #71e1d1;
+  --static-white: #f5f5f5;
+  --screen-bg: #fafafa;
+}
+
+.navbar {
+  background-color: var(--screen-bg);
+  padding: 12px 0;
+  border-bottom: 3px solid var(--vhs-purple);
+  box-shadow: 0 4px 20px rgba(127, 75, 214, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  font-family: 'Baloo 2', cursive;
+}
+
+.app-container,
+.application-wrapper,
+.gallery-container {
+  padding-top: 100px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav-logo {
+  color: var(--bubblegum);
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.8rem;
+  text-shadow: 0 0 5px var(--bubblegum), 0 0 10px var(--vhs-purple);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-logo img {
+  height: 70px;
+  width: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--vhs-purple);
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Baloo 2', cursive;
+}
+
+.nav-links a:hover {
+  background: var(--bubblegum);
+  color: white;
+  box-shadow: 0 0 10px var(--bubblegum);
+  transform: scale(1.05);
+}
+
+.exit-button {
+    background: transparent;
+    border: 2px solid #ff4f5e;
+    color: #ff4f5e;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.6rem;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-shadow:
+      0 0 5px #ff4f5e,
+      0 0 10px #ff4f5e,
+      0 0 20px #ff4f5e;
+    box-shadow:
+      0 0 6px #ff4f5e66,
+      inset 0 0 8px #ff4f5e33;
+    transition: all 0.3s ease;
+    margin-left: 20px;
+  }
+  
+  .exit-button:hover {
+    transform: scale(1.05) rotate(-1deg);
+    background: rgba(255, 79, 94, 0.1);
+  }
+  

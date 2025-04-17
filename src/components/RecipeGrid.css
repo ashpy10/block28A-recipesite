@@ -1,0 +1,111 @@
+
+.grid-section {
+    padding: 2rem;
+    background: #fff;
+  }
+  
+
+
+  .grid-title {
+    color: #7f4bd6;
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  
+  .recipe-card:hover {
+    transform: scale(1.03) rotate(-1deg);
+  }
+  
+  .recipe-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    display: flex;
+  }
+  
+  .recipe-info h3 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: #2b2b2b;
+  }
+  
+  .recipe-info p {
+    font-size: 0.8rem;
+    color: #444;
+  }
+  
+  .reels {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    display: flex;
+    justify-content: space-between;
+    z-index: 0;
+  }
+  
+  .reel {
+    width: 25px;
+    height: 25px;
+    background: radial-gradient(circle, #fff 40%, #7f4bd6 70%, transparent 80%);
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: none;
+    transition: transform 0.4s ease;
+  }
+  
+  .recipe-card {
+    overflow: hidden;
+    background: linear-gradient(to bottom right, #ffb385, #ff7ca3);
+    border: 3px dashed #71e1d1;
+    font-family: 'Baloo 2', cursive;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    position: relative;
+    padding: 1rem;
+    transition: transform 0.2s ease;
+    align-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+  }
+  
+  .recipe-card:hover .reel {
+    animation: spin 1s linear infinite;
+  }
+
+  .recipe-card::before {
+    content: "📎";
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    font-size: 1.5rem;
+    transform: rotate(12deg);
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .saved-toast {
+    font-size: 0.65rem;
+    color: var(--bubblegum, #ff7ca3);
+    font-family: 'Press Start 2P', monospace;
+    margin-top: 6px;
+    text-shadow: 0 0 5px #ff7ca3;
+  }
+  
